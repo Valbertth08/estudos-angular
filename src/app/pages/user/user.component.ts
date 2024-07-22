@@ -12,9 +12,16 @@ export class UserComponent implements OnInit {
 //eu utilizo essa estrutura para conseguir pegar um parametro de uma rota, assim que o componente é inciado
 constructor(private route: ActivatedRoute){}
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params)=>{//essa função é usada para pegar um parametro ou mais de uma rota
-      this.username=params.get('username')//pego o parametro username
-    })
+    this.getNome();//é uma boa pratica utilizar função, não colocar o codigo direto
+    //no ngOnInit
+  }
+
+  getNome(){
+    this.route.queryParams.subscribe((params)=>
+    this.username=params['username']
+    //aqui eu informo qualque a chave(variavel) que eu quero pegar o valor
+    //no caso aqui seria o username
+    )
   }
 
 }
