@@ -1,4 +1,8 @@
-<ul>
- <li *ngFor="let item of users">{{item}}</li><!-- sempre aplico o ngFor no item que eu quro que se repita em tela.
- Nesse caso foi a LI-->
+<ul class="list-users">
+<li *ngFor="let user of users">
+  <!--quando eu utilizo o routerLink com os [] eu posso passar as variaveis direto-->
+  <button [routerLink]="'/users/'+ user" class="btn btn-primary">{{user}} </button>
+  <!-- esse codigo passa o usuario(a variavel) como parametro para o link-->
+   <!--OBS:para isso funcionar, precisamos definir a rota primeiro o app-routing.module.ts-->
+</li>
 </ul>
