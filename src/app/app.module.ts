@@ -9,6 +9,7 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
 import { BaseUiComponent } from './_components/base-ui/base-ui.component';
 import { UsersComponent } from './_components/users/users.component';
 import { UserComponent } from './pages/user/user.component';
+import { UserCardComponent } from './_components/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserComponent } from './pages/user/user.component';
     BaseUiComponent,
     UsersComponent,
     UserComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,

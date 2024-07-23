@@ -1,9 +1,7 @@
-<ul class="list-users">
-<li *ngFor="let user of users">
-  <!--quando eu utilizo o routerLink com os [] eu posso passar as variaveis direto-->
-  <button [routerLink]="'/users/details'"[queryParams]="{
-    username:user
-  }" class="btn btn-primary">{{user}} </button>
-  <!--com o query params é possivel passar o objeto como parametro da url, o user é passado para dentro da variavel username-->
-</li>
-</ul>
+
+<div class="row">
+  <!--NA CRIAÇÃO DESSE APP, SERA FEITA TODA A ESTRUTURAÇÃO DO HTML DEFINIDO NELE-->
+  <app-user-card *ngFor="let user of users" [user]="user" class="col-md"></app-user-card>
+  <!--esse [user] representa a variavel de dentro que existe dentro do user_card-->
+  <!--ou seja, o dado passado para [user] foi carregado atraves da lista definida no users-->
+</div>
