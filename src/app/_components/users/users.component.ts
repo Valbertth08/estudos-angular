@@ -51,7 +51,8 @@ export class UsersComponent implements OnInit{
 
  SubmitForm(){
   if(this.userForm.valid){
-    console.log(this.userForm.value)
+    this.users.push(this.userForm.value)//estou adicionando um noveo usuario a lista
+    this.userForm.reset()///reseta os campos(limpa)
   }
 
  }

@@ -8,7 +8,7 @@ const routes: Routes = [
   //path: "caminho", component: componente para o caminho
   {path: '',component: HomeComponent},//indico que esse componente tem que ser carregado na raiz do programa
   {path: 'users',component: UsersComponent},
-  {path: 'users/:username',component: UserComponent},///informo que essa rota irar recebr um parametro username
+  {path: 'users/details',component: UserComponent},///informo que essa rota irar recebr um parametro username
 
 
 

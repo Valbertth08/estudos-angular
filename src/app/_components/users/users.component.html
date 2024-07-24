@@ -10,7 +10,7 @@
       <input id="Idade" type="number" class="form-control"  formControlName="idade">
     </div>
   </div>
-  <button class="btn btn-sucess mt-3">Incluir</button>
+  <button (click)="SubmitForm()" class="btn btn-success mt-3">Incluir</button>
 </form>
 
 
@@ -19,7 +19,7 @@
   <!--quando uma varivael é um output, ela vem entre parenteses-->
   <app-user-card
   (userInfoEmitter)="infoUserSelecionado($event)"
-  *ngFor="let user of users" [user]="user" class="col-md">
+  *ngFor="let user of users" [user]="user" class="col-md-3 mb-3">
   </app-user-card>
   <!--esse [user] representa a variavel de dentro que existe dentro do user_card-->
   <!--ou seja, o dado passado para [user] foi carregado atraves da lista definida no users-->
