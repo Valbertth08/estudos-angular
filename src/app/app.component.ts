@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   exibeHome: boolean=true;
+  title: any;
   destruir(){
     this.exibeHome=false;
   }
